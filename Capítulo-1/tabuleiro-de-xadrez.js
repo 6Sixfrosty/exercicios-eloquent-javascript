@@ -8,20 +8,32 @@
  *  tabuleiro de xadrez.
  */
 
+/*
+ * Tarefa extra:
+ *  Defina um binding size = 8
+ *  e mude o programa para que funcione para qualquer size, produzindo uma
+ *  grade da largura e altura fornecidas.
+ */
 
-// Loop que imprime por linhas
-for (let a = 1; a <= 8; a++) {
-    // Loop que constroi cada linha com "#" ou " "
-    for (let s = ""; s.length < 8;) {
-        // condicional que verifica se a iteração atual e par ou impar 
-        // e adiciona "#" caso o resultado do tamanho de "s"(string da linha) + a(contador do loop pai) seja par
-        if ((s.length + a) % 2 == 0) {
-            s += "#";
+// Variável que armazena a largura e altura do tabuleiro
+const size = 100;
+let tabuleiro = "";
+
+// Loop que cria cada linha verticalmente baseado no valor de "size"
+for (let a = 1; a <= size; a++) {
+    // Loop que constrói a linha horizontalmente baseado no valor de "size"
+    for (let s = 1; s <= size; s++) {
+        // Verifica se a posição atual é par ou ímpar
+        // e adiciona "#" ou " " se for par ou impar para formar o padrão xadrez
+        if ((s + a) % 2 == 0) {
+            tabuleiro += "#";
         } else {
-        // adiciona " " caso seja impar
-            s += " ";
+            tabuleiro += " ";
         }
-        // imprime no console a linha completa, caso já tenha chegado ao seu tamanho total de caracteres
-        if (s.length == 8) console.log(s);
     }
+    // Atribui a quebra de linha a variavel tabuleiro
+    tabuleiro += "\n";
 }
+
+// Imprime o tabuleiro no console
+console.log(tabuleiro);

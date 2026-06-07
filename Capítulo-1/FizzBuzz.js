@@ -6,21 +6,20 @@
  * por 3), imprima "Buzz" em vez do número.
  */
 
-// Inicializando loop com variavel que armazena os numeros.
-// A cada interação e incrementando (+1) a variavel.
-for (let a = 1; a <= 100; a++){
-    /* 
-    * Inicializada variavel que armazena o resultado da divisão por 3 e 5.
-    * Atenção!!!, essa variavel reinicia a cada interação.
-    */
-    let resultado = ""
-    /* 
-    * Estruturas condicionais para avaliar se o numero da atual interação
-    * e divisivel por 3 ou 5.
-    */
-    if (a % 3 == 0) resultado += "Fizz";
-    if (a % 5 == 0) resultado += "Buzz";
-    // Imprime no console a variavel resultado, caso alguma das condicionais resultar em verdadeiro
-    // Caso o número atual não seja nem Fizz ou Buzz, imprima o número da interação atual
+// Inicializando loop com variável que armazena os números.
+// A cada iteração é incrementado +1 à variável.
+for (let a = 1; a <= 100; a++) {
+    /*
+     * Variável que armazena o resultado da verificação por 3 e 5.
+     * Atenção: reinicia a cada iteração.
+     */
+    let resultado = "";
+    /*
+     * Estruturas condicionais para avaliar se o número da iteração atual
+     * é divisível por 3 ou 5.
+     */
+    if (a % 3 === 0) resultado += "Fizz";
+    if (a % 5 === 0) resultado += "Buzz";
+    // Imprime "Fizz", "Buzz", "FizzBuzz" ou o número da iteração atual.
     console.log(resultado || a);
 }
